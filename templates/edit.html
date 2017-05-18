@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Users</title>
+    </head>
+    <body>
+        <h1>Edit User {{ session['curr_id'] }}</h1>
+        <form action="/process" method="post">
+            First Name:<br><input type="text" name="firstname" value="{{ user['first_name'] }}"><br>
+            Last Name:<br><input type="text" name ="lastname" value="{{ user['last_name'] }}"><br>
+            Email:<br><input type="text" name ="email" value="{{ user['email'] }}"><br><br>
+            <input type="submit" value="Update">
+        </form>
+        <p><a href="/">Show</a> | <a href="/users/{{ session['curr_id'] }}">Go Back</a></p>
+    </body>
+</html>
